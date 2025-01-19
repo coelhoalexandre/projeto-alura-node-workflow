@@ -20,52 +20,57 @@ Livraria com sistema de cadastro e manejo de livros, autores e editoras.
 Este projeto já conta com o código necessário para subir a API em um servidor local:
 
 ```
-├── .github
-│   └── workflows
-│       ├── pre-push.yaml
-│       └── unit-tests-pr.yaml
-├── src
-│   ├── controllers
-│   │   ├── autoresController.js
-│   │   ├── editorasController.js
-│   │   └── livrosController.js
-│   ├── db
-│   │   ├── migrations
-│   │   │   └── 20230130173832_livraria.js
-│   │   ├── seeds
-│   │   │   └── livraria.js
-│   │   ├── dbconfig.js
-│   │   ├── knexfile.js
-│   │   └── livraria.sqlite
-│   ├── models
-│   │   ├── autor.js
-│   │   ├── editora.js
-│   │   └── livro.js
-│   ├── routes
-│   │   ├── autoresRoutes.js
-│   │   ├── editorasRoutes.js
-│   │   ├── index.js
-│   │   └── livrosRoutes.js
-│   ├── test
-│   │   ├── models
-│   │   │   ├── autor.test.js
-│   │   │   └── editora.test.js
-│   │   ├── routes
-│   │   │   ├── autoresRoutes.test.js
-│   │   │   ├── editorasRoutes.test.js
-│   │   │   └── livrosRoutes.test.js
-│   │   └── livraria.sqlite
-│   └── app.js
-├── docker-compose.yaml
-├── Dockerfile
-├── .env
-├── .eslintrc.cjs
-├── .gitignore
-├── package.json
-├── package-lock.json
-├── populate.sql
-├── README.md
-└── server.js
+.
+├── ./src
+│   ├── ./src/app.js
+│   ├── ./src/controllers
+│   │   ├── ./src/controllers/autoresController.js
+│   │   ├── ./src/controllers/editorasController.js
+│   │   ├── ./src/controllers/EventosController.js
+│   │   └── ./src/controllers/livrosController.js
+│   ├── ./src/db
+│   │   ├── ./src/db/dbconfig.js
+│   │   ├── ./src/db/knexfile.js
+│   │   ├── ./src/db/livraria.sqlite
+│   │   ├── ./src/db/migrations
+│   │   │   └── ./src/db/migrations/20230130173832_livraria.js
+│   │   └── ./src/db/seeds
+│   │       └── ./src/db/seeds/livraria.js
+│   ├── ./src/models
+│   │   ├── ./src/models/autor.js
+│   │   ├── ./src/models/editora.js
+│   │   ├── ./src/models/evento.js
+│   │   └── ./src/models/livro.js
+│   ├── ./src/routes
+│   │   ├── ./src/routes/autoresRoutes.js
+│   │   ├── ./src/routes/editorasRoutes.js
+│   │   ├── ./src/routes/eventosRoutes.js
+│   │   ├── ./src/routes/index.js
+│   │   └── ./src/routes/livrosRoutes.js
+│   ├── ./src/services
+│   │   └── ./src/services/unleash.js
+│   └── ./src/test
+│       ├── ./src/test/livraria.sqlite
+│       ├── ./src/test/models
+│       │   ├── ./src/test/models/autor.test.js
+│       │   ├── ./src/test/models/editora.test.js
+│       │   └── ./src/test/models/evento.test.js
+│       └── ./src/test/routes
+│           ├── ./src/test/routes/autoresRoutes.test.js
+│           ├── ./src/test/routes/editorasRoutes.test.js
+│           ├── ./src/test/routes/eventosRoutes.test.js
+│           └── ./src/test/routes/livrosRoutes.test.js
+└── ./unleash-docker
+    ├── ./unleash-docker/Dockerfile
+    └── ./unleash-docker/wait-for
+├── ./docker-compose.yaml
+├── ./Dockerfile
+├── ./package.json
+├── ./package-lock.json
+├── ./populate.sql
+├── ./README.md
+├── ./scripts
+├── ./server.js
 ```
 
 ### Instalação do projeto
